@@ -26,3 +26,14 @@ const prova = {
     ]
 };
 
+function corrigirProva (prova) {
+    let x = 0;
+    for(let i of prova.questoes){
+        if(i.resposta === i.correta){
+            x++;
+        }
+    }
+    console.log(`O aluno(a) ${prova.aluno} acertou ${x} questões e obteve nota ${x*2}`)
+}
+
+corrigirProva(prova);
